@@ -70,3 +70,16 @@
     color: #fff;
     border: none !important;
   }
+  form{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  form,input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+
+  }

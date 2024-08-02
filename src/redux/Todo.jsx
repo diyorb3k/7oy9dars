@@ -13,31 +13,46 @@ const Todo = () => {
   console.log(data);
   return (
     <div className="container">
+      <div>
+<form action="">
+<input type="text" placeholder="ID"/>
+<input type="text" placeholder="TEXT"/>
+</form>
+<button>ADD</button>
+</div>
       {isLoading ? (
-        <h1>Loading .....</h1>
+        <h1>Yuklanmoqda .....</h1>
       ) : error ? (
         <h1>error: {error}</h1>
       ) : (
+        <form action="">
+        <input type="text" placeholder="salom "/>
+        <input type="text" placeholder="salom "/>
+        <input type="text" placeholder="salom "/>
+      </form>,
         data.map((todo) => {
           return (
-            <div key={todo.id}>
 
-              <table>
-                  <tr>
-                    
-                    <td className="id"> {todo.id}</td>
-                    <td className="title">{todo.title}</td>
-                    <td className="completed">{todo.completed}</td>
-                    <td>
-                      <button className="edit">Edit</button>
-                    </td>
-                    <td>
-                      <button className="dalet">Delete</button>
-                    </td>
-                  </tr>
-               
-              </table>
-            </div>
+          <>
+            <div key={todo.id}>
+          
+          <table>
+              <tr>
+                
+                <td className="id"> {todo.id}</td>
+                <td className="title">{todo.title}</td>
+                <td className="completed">{todo.completed}</td>
+                <td>
+                  <button className="edit">Edit</button>
+                </td>
+                <td>
+                  <button className="dalet">Delete</button>
+                </td>
+              </tr>
+           
+          </table>
+        </div>
+          </>
           );
         })
       )}

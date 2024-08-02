@@ -13,13 +13,18 @@ const Todo = () => {
   console.log(data);
   return (
     <div className="container">
-      <div>
+ <div className="forimm">
+  <div className="SEACH">
+    <input type="text" placeholder="seach" />
+  </div>
+ <div>
 <form action="">
 <input type="text" placeholder="ID"/>
 <input type="text" placeholder="TEXT"/>
 </form>
 <button>ADD</button>
 </div>
+ </div>
       {isLoading ? (
         <h1>Yuklanmoqda .....</h1>
       ) : error ? (
